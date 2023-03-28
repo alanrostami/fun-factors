@@ -18,8 +18,13 @@ public class ThrowHammer : MonoBehaviour
     public float throwForce;
     public float throwUpwardForce;
 
-    bool readyToThrow;
+    [Header("Animation")]
+    public Animator anim;
 
+    bool readyToThrow;
+    [SerializeField] private AudioSource rotateHammer;
+    [SerializeField] private AudioSource throwHammer;
+    
     private void Start()
     {
         readyToThrow = true;
@@ -27,8 +32,10 @@ public class ThrowHammer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
+        if (Input.GetKeyUp(throwKey) && readyToThrow && totalThrows > 0)
         {
+            anim.SetBool("ready", false);
+            rotateHammer.Stop();
             Throw();
         }
     }
@@ -36,6 +43,7 @@ public class ThrowHammer : MonoBehaviour
     private void Throw()
     {
         readyToThrow = false;
+        throwHammer.Play();
 
         // Instantiate object to throw
         GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);

@@ -6,11 +6,13 @@ public class BreakGlass : MonoBehaviour
 {
     public Transform brokenObject;
     public float magnitudeCol, radius, power, upwards;
+    [SerializeField] private AudioSource breakingGlass;
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.relativeVelocity.magnitude > magnitudeCol)
         {
+            breakingGlass.Play();
             Destroy(gameObject);
             Instantiate(brokenObject, transform.position, transform.rotation);
             brokenObject.localScale = transform.localScale;
