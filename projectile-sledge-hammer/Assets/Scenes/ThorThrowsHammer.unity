@@ -4947,10 +4947,10 @@ MonoBehaviour:
   throwCooldown: 1.5
   throwKey: 323
   throwForce: 30
-  throwUpwardForce: 10
+  throwUpwardForce: 5
   anim: {fileID: 1662148236}
   rotateHammer: {fileID: 1978423695}
-  throwHammer: {fileID: 1978423696}
+  throwHammer: {fileID: 1978423697}
 --- !u!54 &1978423692
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5514,11 +5514,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2386072624801702966, guid: fec62b5d0105cc341a9d3b923ec2e910, type: 3}
   m_PrefabInstance: {fileID: 2139965996}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &543450652071639405 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd59f4d897cbaab4fa57c085f6031220, type: 3}
-  m_PrefabInstance: {fileID: 1662148230}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &919132147596354519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd59f4d897cbaab4fa57c085f6031220, type: 3}
@@ -5588,7 +5583,7 @@ PrefabInstance:
     - target: {fileID: 3889760419973950263, guid: fec62b5d0105cc341a9d3b923ec2e910, type: 3}
       propertyPath: hitObject
       value: 
-      objectReference: {fileID: 543450652071639405}
+      objectReference: {fileID: 919132147596354519}
     - target: {fileID: 4420350765392530785, guid: fec62b5d0105cc341a9d3b923ec2e910, type: 3}
       propertyPath: m_Name
       value: Column

@@ -75,5 +75,6 @@ public class ThrowHammer : MonoBehaviour
     private void ResetThrow()
     {
         readyToThrow = true;
+        // objectToThrow.transform.position = new Vector3(52.13f, 4.47f, -49.02f);
     }
 }
