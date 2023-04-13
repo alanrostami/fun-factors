@@ -4944,7 +4944,7 @@ MonoBehaviour:
   attackPoint: {fileID: 476121951}
   objectToThrow: {fileID: 919132147596354519}
   totalThrows: 100
-  throwCooldown: 1.5
+  throwCooldown: 3
   throwKey: 323
   throwForce: 30
   throwUpwardForce: 5
