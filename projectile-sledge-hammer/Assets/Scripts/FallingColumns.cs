@@ -6,6 +6,8 @@ public class FallingColumns : MonoBehaviour
     public float magnitudeCol, radius, power, upwards;
     [SerializeField] private AudioSource fallingCol;
 
+    // public Reward score;
+
     void Start()
     {
         fallingCol.Stop();
@@ -16,7 +18,7 @@ public class FallingColumns : MonoBehaviour
         if (collision.relativeVelocity.magnitude > magnitudeCol)
         {
             fallingCol.Play();
-            // Destroy(hitObject);
+            Reward.score += 10;
         }
     }
 }
